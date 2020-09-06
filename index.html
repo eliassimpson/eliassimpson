@@ -23,10 +23,18 @@
         <canvas id = "theCanvas">
             <script>
             var theCanvas = document.getElementById("theCanvas");
-            theCanvas.onclick = changeBG;
-                function changeBG() {
-                    theCanvas.style.backgroundColor = "white";
-                }
+            var context = theCanvas.getContext('2d');
+            var mouseClicked = false, mouseReleased = true;
+            document.addEventListener("mousemove", onMouseMove, "false");
+
+            function onMouseMove(e) {
+            context.beginPath();
+            context.arc(e.clientX, e.clientY, 7.5, 0, Math.PI * 2, false);
+            context.linewidth = 5;
+            context.strokeStyle = "#fff";
+            context.stroke();
+            }
+            
             </script>
         </canvas>
     </body>
