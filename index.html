@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>canvas</title>
+        <title>canvasX</title>
         <style>
             html, body {
                 width: 100vw;
                 height: 100vh;
                 margin: 0;
-                overflow: hidden;
                 background-color: #040b2f;
             }
             canvas {
@@ -26,7 +25,9 @@
             <script>
             var theCanvas = document.getElementById("theCanvas");
             var context = theCanvas.getContext('2d');
-                
+            context.canvas.width = window.innerWidth;
+            context.canvas.height = window.innerHeight;
+            var mouseClicked = false, mouseReleased = true;
             theCanvas.addEventListener("mousemove", onMouseMove, "false");
 
             function onMouseMove(e) {
