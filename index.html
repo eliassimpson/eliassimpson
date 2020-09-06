@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>canvas</title>
+        <title>canvasX</title>
         <style>
             html, body {
                 width: 100vw;
@@ -20,10 +20,14 @@
         </style>
     </head>
     <body>
-        <canvas id = "myCanvas">
-            canvas.addEventListener('click', changeColor() {});
-            function changeColor()
-            {canvas.background-color: white;}
+        <canvas id = "theCanvas">
+            <script>
+            var theCanvas = document.getElementById("theCanvas");
+            theCanvas.onclick = changeBG;
+                function changeBG() {
+                    theCanvas.style.backgroundColor = "white";
+                }
+            </script>
         </canvas>
     </body>
 </html>
