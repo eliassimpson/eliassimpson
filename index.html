@@ -27,7 +27,7 @@
             var theCanvas = document.getElementById("theCanvas");
             var context = theCanvas.getContext('2d');
             var mouseClicked = false, mouseReleased = true;
-            document.addEventListener("mousemove", onMouseMove, "false");
+            theCanvas.addEventListener("mousemove", onMouseMove, "false");
 
             function onMouseMove(e) {
             context.beginPath();
