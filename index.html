@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>canvasX</title>
+        <title>canvas</title>
         <style>
             html, body {
                 width: 100vw;
@@ -12,7 +12,6 @@
             canvas {
                 width: 96vw;
                 height: 94vh;
-                overflow: hidden;
                 background-color: black;
                 position: relative;
                 top: 3vh;
@@ -21,24 +20,25 @@
         </style>
     </head>
     <body>
-        <canvas id = "theCanvas">
+        <canvas id = "theCanvas"></canvas>
             <script>
+            
             var theCanvas = document.getElementById("theCanvas");
             var context = theCanvas.getContext('2d');
+
             context.canvas.width = window.innerWidth;
             context.canvas.height = window.innerHeight;
-            var mouseClicked = false, mouseReleased = true;
+            
             theCanvas.addEventListener("mousemove", onMouseMove, "false");
-
+ 
             function onMouseMove(e) {
             context.beginPath();
-            context.arc(e.clientX, e.clientY, 7.5, 0, Math.PI * 2, false);
+            context.arc(e.clientX + (e.clientX - window.innerWidth/2) * .045, e.clientY + (e.clientY - window.innerHeight/2) * .065, 7.5, 0, Math.PI * 2, false);
             context.linewidth = 5;
             context.strokeStyle = "#fff";
             context.stroke();
             }
             
             </script>
-        </canvas>
     </body>
 </html>
