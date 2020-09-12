@@ -37,7 +37,7 @@
             context.lineWidth = 5;
             context.beginPath();
 
-            context.rect(context.canvas.width * .08 , context.canvas.height * .1,context.canvas.width * .2,context.canvas.height * .2);
+            context.rect(20, 20, 80, 120);
             context.stroke();
 
             //where is the border, in relative terms?
@@ -48,8 +48,8 @@
             theCanvas.addEventListener("mousemove", onMouseMove);
 
             function onMouseMove(e) {
-              let xAdj = e.clientX + (e.clientX - window.innerHeight/2) * .04;
-              let yAdj = e.clientY + (e.clientY - window.innerHeight/2) * .065;
+              let xAdj = e.clientX + (e.clientX - context.window.innerWidth/2) * .04;
+              let yAdj = e.clientY + (e.clientY - context.window.innerHeight/2) * .065;
               if (x == 0)
               {
                 x = xAdj:
