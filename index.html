@@ -30,38 +30,42 @@
             var theCanvas = document.getElementById("theCanvas");
             var context = theCanvas.getContext('2d');
 
-            context.beginPath();
-            context.strokeStyle = "#fff";
-            context.lineWidth = 5;
-            context.rect(100, 100, 100, 100);
-            context.stroke();
-
             context.canvas.width = window.innerWidth;
             context.canvas.height = window.innerHeight;
+
+            context.strokeStyle = "#fff";
+            context.lineWidth = 5;
+            context.beginPath();
+
+            context.rect(context.canvas.width * .08 , context.canvas.height * .1,context.canvas.width * .2,context.canvas.height * .2);
+            context.stroke();
+
+            //where is the border, in relative terms?
+            //losing 3% top and 2% left from canvas frame
+            //then...canvas width is relative to body
+            //
 
             theCanvas.addEventListener("mousemove", onMouseMove);
 
             function onMouseMove(e) {
-            context.beginPath();
-            context.strokeStyle = "#fff";
-            context.lineWidth = 5;
-            if (x == 0)
-            {
-              x = e.clientX + (e.clientX - window.innerHeight/2) * .065;
-              y = e.clientY + (e.clientY - window.innerHeight/2) * .065;
-            }
-            x2 = Math.sin(e.clientY/10) * 20 + e.clientX + (e.clientX - window.innerHeight/2) * .065;
-            y2 = Math.cos(e.clientX/10) * 20 + e.clientY + (e.clientY - window.innerHeight/2) * .065;
+              let xAdj = e.clientX + (e.clientX - window.innerHeight/2) * .04;
+              let yAdj = e.clientY + (e.clientY - window.innerHeight/2) * .065;
+              if (x == 0)
+              {
+                x = xAdj:
+                y = yAdj;
+              }
 
+            let dist = Math.sqrt(Math.pow(xAdj, 2) + Math.pow(yAdj, 2));
+            x2 = Math.cos(dist/10) * 30 + xAdj;
+            y2 = Math.sin(dist/10) * 30 + yAdj;
+            context.lineWidth = 3;
             context.moveTo(x, y);
             context.lineTo(x2, y2);
             context.stroke();
-            context.closePath();
             x = x2;
             y = y2;
             }
-
-//e.clientY + (e.clientY - window.innerHeight/2) * .065
 
             </script>
     </body>
