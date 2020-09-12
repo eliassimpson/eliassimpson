@@ -22,23 +22,31 @@
     <body>
         <canvas id = "theCanvas"></canvas>
             <script>
-            
+//            let x = 0;
+//            let y = 0;
+
             var theCanvas = document.getElementById("theCanvas");
             var context = theCanvas.getContext('2d');
 
             context.canvas.width = window.innerWidth;
             context.canvas.height = window.innerHeight;
-            
-            theCanvas.addEventListener("mousemove", onMouseMove, "false");
- 
-            function onMouseMove(e) {
+
+            theCanvas.addEventListener("mousemove", onMouseMove());
+
+            function onMouseMove() {
             context.beginPath();
-            context.arc(e.clientX + (e.clientX - window.innerWidth/2) * .045, e.clientY + (e.clientY - window.innerHeight/2) * .065, 7.5, 0, Math.PI * 2, false);
-            context.linewidth = 5;
             context.strokeStyle = "#fff";
+            context.lineWidth = 5;
+            context.moveTo(0, 0);
+            context.lineTo(e.clientX, e.clientY);
+//            context.arc(e.clientX + (e.clientX - window.innerWidth/2) * .045, e.clientY + (e.clientY - window.innerHeight/2) * .065, 7.5, 0, Math.PI * 2, false);
+//            context.drawLine(x, e.clientX + (e.clientX - window.innerWidth/2) * .045, y, e.clientY + (e.clientY - window.innerHeight/2));
             context.stroke();
+            context.closePath();
+//            x = e.clientX + (e.clientX - window.innerWidth/2) * .045;
+  //          y = e.clientY + (e.clientY - window.innerHeight/2) * .065;
             }
-            
+
             </script>
     </body>
 </html>
