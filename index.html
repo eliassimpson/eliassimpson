@@ -31,17 +31,22 @@
             context.canvas.width = window.innerWidth;
             context.canvas.height = window.innerHeight;
 
-            theCanvas.addEventListener("mousemove", onMouseMove;
+            theCanvas.addEventListener("mousemove", onMouseMove);
 
             function onMouseMove(e) {
             context.beginPath();
             context.strokeStyle = "#fff";
-            context.lineWidth = 5;
+            context.lineWidth = 5
+            if (x === 0)
+            {
+              x = e.clientX + (e.clientX - window.innerWidth/2) * .045;
+              y = e.clientY + (e.clientY - window.innerHeight/2) * .065;
+            }
             context.moveTo(x, y);
-            context.lineTo(e.clientX, e.clientY);
-//            context.arc(e.clientX + (e.clientX - window.innerWidth/2) * .045, e.clientY + (e.clientY - window.innerHeight/2) * .065, 7.5, 0, Math.PI * 2, false);
-//            context.drawLine(x, e.clientX + (e.clientX - window.innerWidth/2) * .045, y, e.clientY + (e.clientY - window.innerHeight/2));
-            context.stroke();
+            context.lineTo(
+              e.clientX + (e.clientX - window.innerWidth/2) * .045,
+              e.clientY + (e.clientY - window.innerHeight/2) * .065);
+
             context.closePath();
             x = e.clientX + (e.clientX - window.innerWidth/2) * .045;
             y = e.clientY + (e.clientY - window.innerHeight/2) * .065;
