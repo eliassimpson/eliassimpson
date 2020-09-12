@@ -22,10 +22,13 @@
     <body>
         <canvas id = "theCanvas"></canvas>
             <script>
-            let x = 0;
-            let y = 0;
-            let x2 = 0;
-            let y2 = 0;
+            var x = 0;
+            var y = 0;
+            var x2 = 0;
+            var y2 = 0;
+            var inBoxHor = false;
+            var inBoxVert = false;
+
 
             var theCanvas = document.getElementById("theCanvas");
             var context = theCanvas.getContext('2d');
@@ -37,19 +40,16 @@
             context.lineWidth = 5;
             context.beginPath();
 
-            context.rect(20, 20, 80, 120);
+            context.rect(window.innerWidth / 4, window.innerHeight / 4, window.innerWidth/ 2, window.innerHeight / 2);
             context.stroke();
 
-            //where is the border, in relative terms?
-            //losing 3% top and 2% left from canvas frame
-            //then...canvas width is relative to body
-            //
+
 
             theCanvas.addEventListener("mousemove", onMouseMove);
-
             function onMouseMove(e) {
-              let xAdj = e.clientX + (e.clientX - context.window.innerWidth/2) * .04;
-              let yAdj = e.clientY + (e.clientY - context.window.innerHeight/2) * .065;
+              var xAdj = e.clientX + (e.clientX - window.innerWidth/2) * .04;
+              var yAdj = e.clientY + (e.clientY - window.innerHeight/2) * .065;
+
               if (x == 0)
               {
                 x = xAdj;
@@ -57,8 +57,50 @@
               }
 
             let dist = Math.sqrt(Math.pow(xAdj, 2) + Math.pow(yAdj, 2));
-            x2 = Math.cos(dist/10) * 30 + xAdj;
-            y2 = Math.sin(dist/10) * 30 + yAdj;
+
+            //are we in the box?
+            if ( e.clientX > window.innerWidth / 4 && e.clientX < window.innerWidth * 3 / 4 && e.clientY > window.innerHeight / 4 && e.clientY < window.innerHeight * 3 / 4)
+            {
+              //do we have a direction already? assign if not
+              if (inBoxVert == false && inBoxHor == false)
+              {
+
+              let xTest = Math.min(Math.abs(window.innerWidth / 4 - xAdj), Math.abs(window.innerWidth * 3 / 4 - xAdj));
+              let yTest = Math.min(Math.abs(window.innerHeight / 4 - yAdj), Math.abs(window.innerHeight * 3 / 4 - yAdj));
+
+                if (xTest > yTest) {
+                inBoxVert = true;
+                context.beginPath();
+                context.strokeStyle = "lime";}
+
+                else {
+                inBoxHor = true;
+                context.beginPath();
+                context.strokeStyle = "aqua";}
+
+              }
+              else if (inBoxVert == true)
+                          {
+                            x2 = Math.cos(dist/10) * 30 + xAdj;
+                            y2 = yAdj;
+                          }
+              //otherwise, must be inBoxhor
+              else
+                          {
+                            x2 = xAdj;
+                            y2 = Math.sin(dist/10) * 30 + yAdj;
+                          }
+            }
+            //not in the box
+            else {
+              inBoxHor = false;
+              inBoxVert = false;
+              context.beginPath();
+              context.strokeStyle = "#fff";
+              x2 = Math.cos(dist/10) * 30 + xAdj;
+              y2 = Math.sin(dist/10) * 30 + yAdj;
+            }
+
             context.lineWidth = 3;
             context.moveTo(x, y);
             context.lineTo(x2, y2);
