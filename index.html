@@ -24,6 +24,10 @@
             <script>
             let x = 0;
             let y = 0;
+            let xpi = 0;
+            let ypi = 0;
+            let xpos = 0;
+            let ypos = 0;
 
             var theCanvas = document.getElementById("theCanvas");
             var context = theCanvas.getContext('2d');
@@ -34,21 +38,23 @@
             theCanvas.addEventListener("mousemove", onMouseMove);
 
             function onMouseMove(e) {
+            xpi = e.clientX * Math.PI;
+            ypi = e.clientY * Math.PI;
             context.beginPath();
             context.strokeStyle = "#fff";
             context.lineWidth = 5
-            if (x === 0)
+            if (x == 0)
             {
-              x = e.clientX + (e.clientX - window.innerWidth/2) * .045;
-              y = e.clientY + (e.clientY - window.innerHeight/2) * .065;
+              xpos = cos(xpi);
+              ypos = e.clientY + (e.clientY - window.innerHeight/2) * .065;
             }
-            context.moveTo(x, y);
-            context.lineTo(
-              e.clientX + (e.clientX - window.innerWidth/2) * .045,
-              e.clientY + (e.clientY - window.innerHeight/2) * .065);
 
+
+            context.moveTo(x, y);
+            context.lineTo(xpos, e.clientY + (e.clientY - window.innerHeight/2) * .065);
+            context.stroke();
             context.closePath();
-            x = e.clientX + (e.clientX - window.innerWidth/2) * .045;
+            x = xpos;
             y = e.clientY + (e.clientY - window.innerHeight/2) * .065;
             }
 
