@@ -30,6 +30,12 @@
             var theCanvas = document.getElementById("theCanvas");
             var context = theCanvas.getContext('2d');
 
+            context.beginPath();
+            context.stroke style = "#fff";
+            context.lineWidth = 5;
+            context.rect(500, 500,100, 100);
+            context.stroke();
+
             context.canvas.width = window.innerWidth;
             context.canvas.height = window.innerHeight;
 
@@ -38,7 +44,7 @@
             function onMouseMove(e) {
             context.beginPath();
             context.strokeStyle = "#fff";
-            context.lineWidth = 5
+            context.lineWidth = 5;
             if (x == 0)
             {
               x = e.clientX + (e.clientX - window.innerHeight/2) * .065;
@@ -54,6 +60,8 @@
             x = x2;
             y = y2;
             }
+
+//e.clientY + (e.clientY - window.innerHeight/2) * .065
 
             </script>
     </body>
