@@ -42,6 +42,10 @@ section {
   padding-bottom: 3vw;
 }
 
+#bumpDown {
+  padding-top: 1px;
+}
+
 img {
   display: block;
   margin: 0;
