@@ -22,6 +22,10 @@ section {
   margin-right: 24vw;
 }
 
+.preload {
+  visibility: hidden;
+}
+
 #textright {
   text-align: right;
   margin-right: 4vw;

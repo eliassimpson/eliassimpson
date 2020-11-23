@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <link rel = "stylesheet" type = "text/css" href = "style.css">
   <head>
+  <script>
+    <src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script>
+  <script>
+    $(window).load(function() {
+        $('.preload').attr('src', function(i,a){
+            $(this).attr('src','')
+                .removeClass('preload')
+                .attr('src',a);
+        });
+    });
+  </script>
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Playfair">
       <link rel="stylesheet"
@@ -35,10 +47,10 @@
       <section id = "machine learning">
         <h2> Machine Learning </h2>
         <table><td>
-        <img src = "https://eliassimpson.github.io/eliassimpson/images/board.gif" class = "board-gif">
+        <img src = "https://eliassimpson.github.io/eliassimpson/images/board.gif" class = "preload">
         </td>
         <td>
-        <img src = "https://eliassimpson.github.io/eliassimpson/images/odds.gif" class = "odds-gif">
+        <img src = "https://eliassimpson.github.io/eliassimpson/images/odds.gif" class = "preload">
         </td>
         </table>
       </section>
