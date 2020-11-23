@@ -1,18 +1,64 @@
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 20vw;
-  height: auto;
+body {
+  margin: 0;
+  margin-top: 5vw;
+  font-family: sans-serif;
 }
 
 h1 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  margin-bottom: 9vw;
+  font-size: 3em;
+  font-family: 'Playfair', serif;
 }
 
-body {
+h2 {
+  font-size: 2em;
+}
+
+section {
+  margin-top: 5vw;
+  margin-left: 24vw;
+  margin-right: 24vw;
+}
+
+#textright {
+  text-align: right;
+  margin-right: 4vw;
+}
+
+#CV {
+  background:linear-gradient(to bottom, transparent 15%, #53c68c 15%, #53c68c 85%, transparent 85%);
+  margin-left: 0vw;
+  margin-right: 0vw;
+  margin-top: -1vw;
+}
+
+#bumpUp {
+  padding-bottom: 3vw;
+}
+
+img {
+  display: block;
   margin: 0;
-  margin-top: 50px;
+  width: 23vw;
+}
+
+p {
+    font-family: 'Fira Sans';
+}
+
+ul {
+}
+
+td {
+  width: 25vw;
+}
+
+table {
+  border-spacing: 1vw;
+  margin: auto;
+}
+
+footer {
+  margin: 5vw;
 }
