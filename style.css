@@ -27,7 +27,7 @@ section {
 }
 
 .fitWidth {
-  width: 50vw;
+  width: 47vw;
 }
 
 #textright {
@@ -45,6 +45,7 @@ section {
 #algorithms {
   margin-left: 0vw;
   margin-right: 0vw;
+  background-color: #eeeeee;
 }
 
 #bumpUp {
@@ -53,6 +54,10 @@ section {
 
 #bumpDown {
   padding-top: 3px;
+}
+
+#bumpDown2 {
+  padding-top: 4vw;
 }
 
 img {
