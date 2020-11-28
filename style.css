@@ -26,6 +26,10 @@ section {
   visibility: hidden;
 }
 
+.fitWidth {
+  width: 50vw;
+}
+
 #textright {
   text-align: right;
   margin-right: 4vw;
@@ -36,6 +40,11 @@ section {
   margin-left: 0vw;
   margin-right: 0vw;
   margin-top: -1vw;
+}
+
+#algorithms {
+  margin-left: 0vw;
+  margin-right: 0vw;
 }
 
 #bumpUp {
@@ -56,10 +65,11 @@ p {
     font-family: 'Fira Sans';
 }
 
-ul {
+#wide {
+  width: 50vw;
 }
 
-td {
+#skinny {
   width: 25vw;
 }
 
