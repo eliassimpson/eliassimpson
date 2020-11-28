@@ -22,6 +22,26 @@ section {
   margin-right: 24vw;
 }
 
+img {
+  display: block;
+  margin: 0;
+  width: 23vw;
+}
+
+p {
+    font-family: 'Fira Sans';
+}
+
+table {
+  border-spacing: 1vw;
+  margin: auto;
+}
+
+footer {
+  margin: 5vw;
+  margin-top: 10vw;
+}
+
 .preload {
   visibility: hidden;
 }
@@ -48,42 +68,10 @@ section {
   background-color: #eeeeee;
 }
 
-#bumpUp {
-  padding-bottom: 3vw;
-}
-
-#bumpDown {
-  padding-top: 3px;
-}
-
-#bumpDown2 {
-  padding-top: 4vw;
-}
-
-img {
-  display: block;
-  margin: 0;
-  width: 23vw;
-}
-
-p {
-    font-family: 'Fira Sans';
-}
-
 #wide {
   width: 50vw;
 }
 
 #skinny {
   width: 25vw;
-}
-
-table {
-  border-spacing: 1vw;
-  margin: auto;
-}
-
-footer {
-  margin: 5vw;
-  margin-top: 10vw;
 }
