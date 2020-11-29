@@ -14,6 +14,11 @@ h1 {
 
 h2 {
   font-size: 2em;
+  font-family: 'Playfair', serif;
+}
+
+h3 {
+  font-weight: bolder;
 }
 
 section {
@@ -53,7 +58,7 @@ footer {
 
 #textright {
   text-align: right;
-  margin-right: 4vw;
+  margin-right: 3vw;
 }
 
 #CV {
@@ -66,7 +71,7 @@ footer {
 #algorithms {
   margin-left: 0vw;
   margin-right: 0vw;
-  background:linear-gradient(to bottom, #eeeeee 93%, #ffffff 93% 95%, #eeeeee 95%);
+  background:linear-gradient(to bottom, #eeeeee 93%, #e8f2ff 93% 95%, #eeeeee 95%);
 }
 
 #wide {
@@ -75,4 +80,13 @@ footer {
 
 #skinny {
   width: 25vw;
+}
+
+#bold {
+  font-weight: bold;
+}
+
+#tall {
+  line-height: 45px;
+  margin-left: 5vw;
 }
