@@ -7,7 +7,7 @@ body {
 
 h1 {
   text-align: center;
-  margin-bottom: 9vw;
+  margin-bottom: 5vw;
   font-size: 3em;
   font-family: 'Playfair', serif;
 }
@@ -30,7 +30,7 @@ section {
 img {
   display: block;
   margin: 0;
-  width: 23vw; 
+  width: 23vw;
 }
 
 p {
@@ -71,7 +71,7 @@ footer {
 #algorithms {
   margin-left: 0vw;
   margin-right: 0vw;
-  background:linear-gradient(to bottom, #eeeeee 93%, #e8f2ff 93% 95%, #eeeeee 95%);
+  background:linear-gradient(to bottom, #eeeeee 92%, #e8f2ff 92% 95%, #eeeeee 95%);
 }
 
 #wide {
