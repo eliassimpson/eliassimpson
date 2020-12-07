@@ -13,6 +13,7 @@
         });
     });
   </script>
+  <script src = "balldrop.js"></script>
   <link rel = "stylesheet" type = "text/css" href = "style.css">
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Playfair">
@@ -21,36 +22,37 @@
     <title>Elias Simpson</title>
   </head>
   <body>
+      <canvas id = "canvas"></canvas>
       <h1>Elias Simpson</h1>
     <main>
       <section id = "about">
-        <table><td class = "skinny">
+        <table><td id = "skinny">
         <p>College Writing Instructor. Programmer. Software Engineering Student, Iowa State University.
         </br></br></td>
-        <td class = "skinny">
+        <td id = "skinny">
         <p><code>Code</code> is the soil of the digital age. <poet>Poet</poet> in a former life.
         </p></td></table>
       </section>
 
-      <section id = "CV">
-        <table><td class = "skinny">
+      <section id = "CV" name = "CV" onmouseover = "setup()" onmouseout = "bump()">
+        <table><td id = "skinny">
           <img src = "https://eliassimpson.github.io/eliassimpson/images/profilepic.jpeg" class = "profile-img">
         </td>
-        <td id = "class">
+        <td id = "skinny">
           <div style = "padding-bottom: 3vw;">
-            <div class = "textright">
+            <div id = "textright">
           <h2><a href = "https://eliassimpson.github.io/eliassimpson/CV">Curriculum Vitae</a></h2>
           <p>Education</br></br>Professional Experience
         </p></div></div></td>
         </table>
       </section>
 
-      <section id = "machine_learning">
+      <section id = "machine learning">
         <h2> Machine Learning </h2>
-        <table><td class = "skinny">
+        <table><td id = "skinny">
         <img src = "https://eliassimpson.github.io/eliassimpson/images/board.gif" class = "preload">
         </td>
-        <td class = "skinny">
+        <td id = "skinny">
           <div style = "padding-top: 1px;">
             <img src = "https://eliassimpson.github.io/eliassimpson/images/odds.gif" class = "preload">
           </div>
@@ -59,10 +61,10 @@
       </section>
 
       <section id = "algorithms">
-        <table><td class = "wide"><div style = "position: relative; bottom: -42px;">
+        <table><td id = "wide"><div style = "position: relative; bottom: -42px;">
             <img src = "https://eliassimpson.github.io/eliassimpson/images/Dijkstra.png" class = "fitWidth" style = "border: 8px solid #e8f2ff;">
           </div></td>
-          <td  class = "wide">
+          <td  id = "wide">
             <h2>Algorithms</h2>
             <img src = "https://eliassimpson.github.io/eliassimpson/images/USmap.png" class = "fitWidth">
           </td>

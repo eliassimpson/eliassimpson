@@ -42,6 +42,14 @@ p {
     margin-left: -1vw;
 }
 
+p code {
+  font-family: 'Source Code Pro', sans-serif;
+}
+
+p poet {
+  font-family: 'Dosis', sans-serif;
+}
+
 table {
   border-spacing: 1vw;
   margin: auto;
@@ -60,7 +68,15 @@ footer {
   width: 47vw;
 }
 
-#textright {
+.wide {
+  width: 50vw;
+}
+
+.skinny {
+  width: 25vw;
+}
+
+.textright {
   text-align: right;
   margin-right: 3vw;
 }
@@ -78,30 +94,10 @@ footer {
   background:linear-gradient(to bottom, #eeeeee 92%, #e8f2ff 92% 95%, #eeeeee 95%);
 }
 
-#wide {
-  width: 50vw;
-}
-
-#skinny {
-  width: 25vw;
-}
-
-#bold {
-  font-weight: bold;
-}
-
-#tall {
-  line-height: 45px;
-  margin-left: 5vw;
-}
-
 #canvas {
-  margin-left: -240px;
-  margin-top: -28px;
-  width: 450px;
-  height: 175px;
-  border: 1px solid #d3d3d3;
+  width : 98.6vw;
+  height: 15vw;
   position: absolute;
-  left: 50vw;
-  top: 3.65vw;
+  top: 0;
+  left: 0;
 }
