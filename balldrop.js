@@ -63,7 +63,7 @@ var loop = function() {
   for (var i = 0; i < allBalls.length; i++) {
     let ay = 4000;
     if (bumpUp == true && allBalls[i].velocity.y * allBalls[i].velocity.y < 0.001) {
-      allBalls[i].velocity.y = -10;
+      allBalls[i].velocity.y = -10000;
     }
     else {
       allBalls[i].velocity.y += ay * frameRate;
