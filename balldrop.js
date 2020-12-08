@@ -5,13 +5,13 @@ var loopTimer = false;
 var height = window.innerHeight /3;
 var width = window.innerWidth;
 var allBalls = new Array();
-var bumpUp = false;
+var bumpUp = true;
 
-var setup = function() {
-  onDrop = true;
+var setup = function(upDown) {
+  bumpUp = upDown;
   var ball = {
     position: {x: 0, y:0},
-    velocity: {x: 0, y:10},
+    velocity: {x: 0, y:0},
     radius: 0,
     restitution: -.7,
     circle : Math.PI * 2,
@@ -28,15 +28,11 @@ var setup = function() {
   //canvas.addEventListener("mousemove", onMouseMove);
 }
 
-var bump = function () {
-  bumpUp = true;
-}
-
 var ballProperties = function(ball) {
   var ran = Math.random();
   ball.position.x = window.innerWidth * ran;
   ran = Math.random();
-  ball.position.Y = height * ran;
+  ball.position.y = height * ran;
   ran = Math.random();
   if (ran * 5 > 1) {
     if (ran * 5 > 2) {
@@ -61,12 +57,15 @@ var loop = function() {
 
   context.save();
   for (var i = 0; i < allBalls.length; i++) {
-    let ay = 4000;
+    let ay = 0;
     if (bumpUp == true) {
-      allBalls[i].velocity.y = -100000;
+      allBalls[i].velocity.y = -500;
+    }
+    else {
+      ay = 300;
     }
 
-    allBalls[i].velocity.y += ay * frameRate;
+    allBalls[i].velocity.y += ay * frameRate * Math.sqrt(allBalls[i].radius);
     allBalls[i].position.y += allBalls[i].velocity.y * frameRate;
 
     if (allBalls[i].position.y > height - allBalls[i].radius) {
@@ -80,9 +79,8 @@ var loop = function() {
     context.fillStyle = allBalls[i].color;
     context.fill();
     context.closePath();
-    bumpUp = false;
   }
 
   context.restore();
-
+  bumpUp = false;
 }
