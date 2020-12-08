@@ -42,11 +42,11 @@ p {
     margin-left: -1vw;
 }
 
-p code {
+p.code {
   font-family: 'Source Code Pro', sans-serif;
 }
 
-p poet {
+ p.poet {
   font-family: 'Dosis', sans-serif;
 }
 

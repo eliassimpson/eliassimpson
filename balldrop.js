@@ -62,19 +62,18 @@ var loop = function() {
   context.save();
   for (var i = 0; i < allBalls.length; i++) {
     let ay = 4000;
-    if (bumpUp == true && allBalls[i].velocity.y * allBalls[i].velocity.y < 0.001) {
-      allBalls[i].velocity.y = -10000;
+    if (bumpUp == true) {
+      allBalls[i].velocity.y = -100000;
     }
-    else {
-      allBalls[i].velocity.y += ay * frameRate;
-      allBalls[i].position.y += allBalls[i].velocity.y * frameRate;
-      allBalls[i].position.x = allBalls[i].position.x;
 
-      if (allBalls[i].position.y > height - allBalls[i].radius) {
-        allBalls[i].velocity.y *= allBalls[i].restitution;
-        allBalls[i].position.y = height - allBalls[i].radius;
-      }
+    allBalls[i].velocity.y += ay * frameRate;
+    allBalls[i].position.y += allBalls[i].velocity.y * frameRate;
+
+    if (allBalls[i].position.y > height - allBalls[i].radius) {
+      allBalls[i].velocity.y *= allBalls[i].restitution;
+      allBalls[i].position.y = height - allBalls[i].radius;
     }
+
 
     context.beginPath();
     context.arc(allBalls[i].position.x, allBalls[i].position.y, allBalls[i].radius, 0, Math.PI*2, true);
