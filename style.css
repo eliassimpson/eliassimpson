@@ -42,12 +42,8 @@ p {
     margin-left: -1vw;
 }
 
-p.code {
-  font-family: 'Source Code Pro', sans-serif;
-}
-
- p.poet {
-  font-family: 'Dosis', sans-serif;
+ p poet {
+  font-family: 'Dosis', serif;
 }
 
 table {
