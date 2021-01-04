@@ -2,7 +2,7 @@ var frameRate = 1/40;
 var frameDelay = frameRate * 1000;
 var canvas = context = false;
 var loopTimer = false;
-var height = 180;
+var height = 150;
 var width = window.innerWidth;
 var allBalls = new Array();
 var bumpUp = true;
