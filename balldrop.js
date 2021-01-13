@@ -9,21 +9,23 @@ var bumpUp = true;
 
 var setup = function(upDown) {
   bumpUp = upDown;
-  var ball = {
-    position: {x: 0, y:0},
-    velocity: {x: 0, y:0},
-    radius: 0,
-    restitution: -.7,
-    circle : Math.PI * 2,
-  };
-  ballProperties(ball);
-  allBalls.push(ball);
-  if (allBalls.length == 1) {
-    canvas = document.getElementById("canvas");
-    context = canvas.getContext("2d");
-    context.canvas.width = width; //do we need to define? what is default?
-    context.canvas.height = height + 2;
-    loopTimer = setInterval(loop, frameDelay);
+  if (bumpUp == false) {
+    var ball = {
+      position: {x: 0, y:0},
+      velocity: {x: 0, y:0},
+      radius: 0,
+      restitution: -.7,
+      circle : Math.PI * 2,
+    };
+    ballProperties(ball);
+    allBalls.push(ball);
+    if (allBalls.length == 1) {
+      canvas = document.getElementById("canvas");
+      context = canvas.getContext("2d");
+      context.canvas.width = width; //do we need to define? what is default?
+      context.canvas.height = height + 2;
+      loopTimer = setInterval(loop, frameDelay);
+    }
   }
   //canvas.addEventListener("mousemove", onMouseMove);
 }

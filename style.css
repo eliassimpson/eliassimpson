@@ -40,6 +40,7 @@ img {
 p {
     font-family: 'Fira Sans';
     margin-left: -1vw;
+    font-size: 1em;
 }
 
  p poet {
@@ -107,6 +108,12 @@ footer {
     margin-top: 5vh;
     margin-left: 17vw;
     margin-right: 17vw;
+  }
+
+  p {
+      font-family: 'Fira Sans';
+      margin-left: -1vw;
+      font-size: 1.5em;
   }
 
   .skinny {
