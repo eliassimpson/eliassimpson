@@ -4,7 +4,7 @@ a:link {
 
 body {
   margin: 0;
-  margin-top: 15px;
+  margin-top: 60px;
   font-family: sans-serif;
   background-color: #ffffff;
 }
@@ -93,7 +93,7 @@ footer {
 
 #canvas {
   width : 98.6vw;
-  height: 165px;
+  height: 180px;
   position: absolute;
   top: 0;
   left: 0;
