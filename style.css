@@ -105,7 +105,11 @@ footer {
 @media only screen and (max-device-width: 480px) {
   section {
     margin-top: 5vh;
-    margin-left: 12vw;
-    margin-right: 12vw;
+    margin-left: 17vw;
+    margin-right: 17vw;
+  }
+
+  .skinny {
+    width: 32vw;
   }
 }
