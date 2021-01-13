@@ -119,4 +119,11 @@ footer {
   .skinny {
     width: 32vw;
   }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+  }
 }
