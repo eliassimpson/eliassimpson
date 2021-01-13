@@ -2,7 +2,7 @@ var frameRate = 1/40;
 var frameDelay = frameRate * 1000;
 var canvas = context = false;
 var loopTimer = false;
-var height = 150;
+var height = 165;
 var width = window.innerWidth;
 var allBalls = new Array();
 var bumpUp = true;
@@ -48,7 +48,7 @@ var ballProperties = function(ball) {
   }
   else { ball.color = "#FF3366";}
   ran = Math.random();
-  ball.radius = (ran*4) * (ran*12);
+  ball.radius = (ran*5) * (ran*8);
 }
 
 var loop = function() {
