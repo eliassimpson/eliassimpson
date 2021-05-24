@@ -78,6 +78,10 @@ footer {
   margin-right: 3vw;
 }
 
+.build-image {
+  width: 50vw;
+}
+
 #CV {
   background:linear-gradient(to bottom, transparent 15%, #53c68c 15% 85%, transparent 85%);
   margin-left: 0vw;
