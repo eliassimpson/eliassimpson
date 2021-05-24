@@ -107,6 +107,10 @@ footer {
   margin-right: 5vw;
 }
 
+#CV-page {
+  margin-left: 24vw;
+}
+
 @media only screen and (max-device-width: 480px) {
   section {
     margin-top: 5vh;
