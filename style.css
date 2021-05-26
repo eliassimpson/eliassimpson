@@ -58,7 +58,9 @@ table {
 
 footer {
   margin: 5vw;
-  margin-top: 10vw;
+  margin-bottom: -5vw;
+  margin-top: 4vh;
+  padding-top: 5vh;
 }
 
 .preload {
@@ -108,7 +110,12 @@ footer {
 }
 
 #CV-page {
-  margin-left: 22vw;
+  margin-left: 17vw;
+}
+
+#color-base {
+  height : 13vh;
+  background: #e8f2ff;
 }
 
 @media only screen and (max-device-width: 480px) {
