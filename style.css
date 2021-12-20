@@ -118,6 +118,45 @@ footer {
   background: #e8f2ff;
 }
 
+.d-dirt:hover span {
+  visibility:hidden;
+  font-size:.85em;
+}
+
+.d-dirt:hover:after {
+  content: 'd';
+  font-family: 'Fira Sans';
+}
+
+.i-dirt:hover span {
+  visibility: hidden;
+  font-size:.93em;
+}
+
+.i-dirt:hover:after {
+  content: 'i';
+  font-family: 'Fira Sans';
+}
+
+.r-dirt:hover span {
+  visibility:hidden;
+  font-size:.9em;
+}
+
+.r-dirt:hover:after {
+  content: 'r';
+  font-family: 'Fira Sans';
+}
+
+.t-dirt:hover span {
+  visibility:hidden;
+  font-size:.91em;
+}
+
+.t-dirt:hover:after {
+  content: 't';
+  font-family: 'Fira Sans';
+}
 @media only screen and (max-device-width: 480px) {
   section {
     margin-top: 5vh;

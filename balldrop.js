@@ -3,7 +3,7 @@ var frameDelay = frameRate * 1000;
 var canvas = context = false;
 var loopTimer = false;
 var height = 180;
-var width = window.innerWidth;
+var width = document.documentElement.clientWidth;
 var allBalls = new Array();
 var bumpUp = true;
 
@@ -22,7 +22,7 @@ var setup = function(upDown) {
     if (allBalls.length == 1) {
       canvas = document.getElementById("canvas");
       context = canvas.getContext("2d");
-      context.canvas.width = width; //do we need to define? what is default?
+      context.canvas.width = width*1; //do we need to define? what is default?
       context.canvas.height = height + 2;
       loopTimer = setInterval(loop, frameDelay);
     }

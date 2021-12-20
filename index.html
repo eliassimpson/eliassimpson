@@ -6,6 +6,7 @@
   </script>
   <script>
     $(window).load(function() {
+      binary();
         $('.preload').attr('src', function(i,a){
             $(this).attr('src','')
                 .removeClass('preload')
@@ -29,8 +30,13 @@
         <p>Software Engineering Student, Iowa State University.</p>
         <br><br></td>
         <td class = "skinny">
-        <p><code>Code</code> is the soil of the digital age. <poet>Hands</poet> in the dirt.
-        </p></td></tr></table>
+        <p>Code is the soil of the digital age. Hands in the<code>
+            <span class="d-dirt"><span>01100100</span></span>
+             <span class="i-dirt"><span>01101001</span></span>
+             <span class="r-dirt"><span>01110010</span></span>
+             <span class="t-dirt"><span>01110100</span></span></code>.
+      </p>
+      </td></tr></table>
       </section>
 
       <section id = "CV" onmouseover = "setup(false)" onmouseleave = "setup(true)"
