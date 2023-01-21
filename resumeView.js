@@ -30,7 +30,7 @@ function showPDF(urlToPDF) {
 }
 
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
-    document.getElementById("showResume").addEventListener("click", function () {
+    document.getElementById("show-resume").addEventListener("click", function () {
         showPDF("http://eliassimpson.com/images/online_resume_23.pdf")
     });
 });

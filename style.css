@@ -47,7 +47,7 @@ p poet {
   font-family: 'Playfair Display', serif;
 }
 
-p.CV-summary {
+p.resume-summary {
   line-height: 2;
   font-weight: bold;
 }
@@ -89,11 +89,17 @@ footer {
   width: 50vw;
 }
 
-#CV {
+#resume {
   background: linear-gradient(to bottom, transparent 15%, #53c68c 15% 85%, transparent 85%);
   margin-left: 0vw;
   margin-right: 0vw;
   margin-top: -1vw;
+}
+
+#show-resume {
+  cursor:pointer;
+  color:blue;
+  text-decoration:underline;
 }
 
 #algorithms {
@@ -108,10 +114,6 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-#CV-page {
-  margin-left: 17vw;
 }
 
 #color-base {
