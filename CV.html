@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel = "stylesheet" type = "text/css" href = "style.css">
-      <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Playfair">
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Fira+Sans">
-    <title>Curriculum Vitae</title>
-  </head>
-  <body>
-    <h1>Resume</h1>
-    <main id = "CV-page">
-    
-      <div id="adobe-dc-view" style="width: 800px;"></div>
-      <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-      <script type="text/javascript">
-        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-          var adobeDCView = new AdobeDC.View({clientId: "3fccc7ec8d6c43eca6d95ca15de449bb", divId: "adobe-dc-view"});
-          adobeDCView.previewFile({
-            content:{location: {url: "http://eliassimpson.com/images/online_resume_23.pdf"}},
-            metaData:{fileName: "Simpson_Resume.pdf"}
-          }, {embedMode: "IN_LINE"});
-        });
-      </script>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
+  <title>Curriculum Vitae</title>
+</head>
+
+<body>
+  <h1>Resume</h1>
+  <main id="CV-page">
+
+    <div id="adobe-dc-view"></div> <!-- style="width: 800px;"></div> -->
+    <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("adobe_dc_view_sdk.ready", function () {
+        var adobeDCView = new AdobeDC.View({ clientId: "3fccc7ec8d6c43eca6d95ca15de449bb", divId: "adobe-dc-view" });
+        adobeDCView.previewFile({
+          content: { location: { url: "http://eliassimpson.com/images/online_resume_23.pdf" } },
+          metaData: { fileName: "online_resume_23" }
+        });//, { embedMode: "IN_LINE" });
+      });
+    </script>
   </main>
-  <div id = "color-base"><footer>
-      <a href = "https://eliassimpson.github.io/eliassimpson">
-        <h3>Back</h3></a>
-  </footer>
+  <div id="color-base">
+    <footer>
+      <a href="https://eliassimpson.github.io/eliassimpson">
+        <h3>Back</h3>
+      </a>
+    </footer>
   </div>
-  </body>
+</body>
+
 </html>
