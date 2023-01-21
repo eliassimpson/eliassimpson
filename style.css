@@ -103,7 +103,7 @@ footer {
 }
 
 #canvas {
-  width: 100px;
+  width: 100vw;
   height: 180px;
   position: absolute;
   top: 0;
