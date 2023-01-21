@@ -38,17 +38,18 @@ img {
 }
 
 p {
-    font-family: 'Fira Sans';
-    margin-left: -1vw;
-    font-size: 1em;
+  font-family: 'Fira Sans';
+  margin-left: -1vw;
+  font-size: 1em;
 }
 
- p poet {
+p poet {
   font-family: 'Playfair Display', serif;
 }
 
 p.CV-summary {
   line-height: 2;
+  font-weight: bold;
 }
 
 table {
@@ -89,7 +90,7 @@ footer {
 }
 
 #CV {
-  background:linear-gradient(to bottom, transparent 15%, #53c68c 15% 85%, transparent 85%);
+  background: linear-gradient(to bottom, transparent 15%, #53c68c 15% 85%, transparent 85%);
   margin-left: 0vw;
   margin-right: 0vw;
   margin-top: -1vw;
@@ -98,11 +99,11 @@ footer {
 #algorithms {
   margin-left: 0vw;
   margin-right: 0vw;
-  background:linear-gradient(to bottom, #eeeeee 92%, #e8f2ff 92% 95%, #eeeeee 95%);
+  background: linear-gradient(to bottom, #eeeeee 92%, #e8f2ff 92% 95%, #eeeeee 95%);
 }
 
 #canvas {
-  width : 100;
+  width: 100;
   height: 180px;
   position: absolute;
   top: 0;
@@ -114,13 +115,13 @@ footer {
 }
 
 #color-base {
-  height : 13vh;
+  height: 13vh;
   background: #e8f2ff;
 }
 
 .d-dirt:hover span {
-  visibility:hidden;
-  font-size:.87em;
+  visibility: hidden;
+  font-size: .87em;
 }
 
 .d-dirt:hover:after {
@@ -129,7 +130,7 @@ footer {
 
 .i-dirt:hover span {
   visibility: hidden;
-  font-size:.87em;
+  font-size: .87em;
 }
 
 .i-dirt:hover:after {
@@ -137,8 +138,8 @@ footer {
 }
 
 .r-dirt:hover span {
-  visibility:hidden;
-  font-size:.88em;
+  visibility: hidden;
+  font-size: .88em;
 }
 
 .r-dirt:hover:after {
@@ -146,33 +147,35 @@ footer {
 }
 
 .t-dirt:hover span {
-  visibility:hidden;
-  font-size:.87em;
+  visibility: hidden;
+  font-size: .87em;
 }
 
 .t-dirt:hover:after {
   content: 't';
-@media only screen and (max-device-width: 480px) {
-  section {
-    margin-top: 5vh;
-    margin-left: 17vw;
-    margin-right: 17vw;
-  }
 
-  p {
+  @media only screen and (max-device-width: 480px) {
+    section {
+      margin-top: 5vh;
+      margin-left: 17vw;
+      margin-right: 17vw;
+    }
+
+    p {
       font-family: 'Fira Sans';
       margin-left: -1vw;
       font-size: 1.5em;
-  }
+    }
 
-  .skinny {
-    width: 32vw;
-  }
+    .skinny {
+      width: 32vw;
+    }
 
-  h1 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 3em;
-    font-family: 'Playfair Display', serif;
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 3em;
+      font-family: 'Playfair Display', serif;
+    }
   }
 }

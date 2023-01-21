@@ -1,94 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
   </script>
   <script>
-    $(window).load(function() {
-        $('.preload').attr('src', function(i,a){
-            $(this).attr('src','')
-                .removeClass('preload')
-                .attr('src',a);
-        });
+    $(window).load(function () {
+      $('.preload').attr('src', function (i, a) {
+        $(this).attr('src', '')
+          .removeClass('preload')
+          .attr('src', a);
+      });
     });
   </script>
-  <script src = "balldrop.js"></script>
-  <link rel = "stylesheet" type = "text/css" href = "style.css">
+  <script src="balldrop.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-    <title>Elias Simpson</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  </head>
-  <body ontouchend = "setup(true)">
-      <canvas id = "canvas"></canvas>
-      <h1>Elias Simpson</h1>
-    <main>
-      <section id = "about">
-        <table><tr><td class = "skinny">
-        <p>Software Engineering Student, Iowa State University.</p>
-        <br><br></td>
-        <td class = "skinny">
-        <p>Code is the soil of the digital age. Hands in the<code>
+  <title>Elias Simpson</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body ontouchend="setup(true)">
+  <canvas id="canvas"></canvas>
+  <h1>Elias Simpson</h1>
+  <main>
+    <section id="about">
+      <table>
+        <tr>
+          <td class="skinny">
+            <p>Software Engineering Student, Iowa State University.</p>
+            <br><br>
+          </td>
+          <td class="skinny">
+            <p>Code is the soil of the digital age. Hands in the<code>
             <span class="d-dirt"><span>01100100</span></span>
              <span class="i-dirt"><span>01101001</span></span>
              <span class="r-dirt"><span>01110010</span></span>
              <span class="t-dirt"><span>01110100</span></span></code>.
-      </p>
-      </td></tr></table>
-      </section>
-
-      <section id = "CV" onmouseover = "setup(false)" onmouseleave = "setup(true)"
-        ontouchmove = "setup(false)">
-        <table><tr><td class = "skinny">
-          <img src = "https://eliassimpson.github.io/eliassimpson/images/profilepic.jpeg" class = "profile-img">
-        </td>
-        <td class = "skinny">
-          <div style = "padding-bottom: 3vw;">
-            <div class = "textright">
-          <h2><a href = "https://eliassimpson.github.io/eliassimpson/CV">Curriculum Vitae</a></h2>
-          <p class = "CV-summary">
-              Education<br>
-              Professional Experience<br>
-              Projects
             </p>
-          </div></div>
-      </td></tr></table>
-      </section>
-
-      <section id = "machine_learning">
-        <h2> Machine Learning </h2>
-        <table><tr><td class = "skinny">
-        <img src = "https://eliassimpson.github.io/eliassimpson/images/board.gif" class = "preload">
-        </td>
-        <td class = "skinny">
-          <div style = "padding-top: 1px;">
-            <img src = "https://eliassimpson.github.io/eliassimpson/images/odds.gif" class = "preload">
-          </div>
-        </td></tr></table>
-      </section>
-
-      <section id = "algorithms">
-        <table><tr><td class = "wide"><div style = "position: relative; bottom: -42px;">
-            <img src = "https://eliassimpson.github.io/eliassimpson/images/Dijkstra.png" class = "fitWidth" style = "border: 8px solid #e8f2ff;">
-          </div></td>
-          <td  class = "wide">
-            <h2>Algorithms</h2>
-            <img src = "https://eliassimpson.github.io/eliassimpson/images/USmap.png" class = "fitWidth">
-          </td></tr></table>
-      </section>
-    </main>
-
-    <section id = "team-builds">
-      <h2> Team Builds</h2>
-      <img src = "images/team-build.png" class = "build-image">
+          </td>
+        </tr>
+      </table>
     </section>
-    <div id = "color-base">
+
+    <section id="CV" onmouseover="setup(false)" onmouseleave="setup(true)" ontouchmove="setup(false)">
+      <table>
+        <tr>
+          <td class="skinny">
+            <img src="https://eliassimpson.github.io/eliassimpson/images/profilepic.jpeg" class="profile-img">
+          </td>
+          <td class="skinny">
+            <div style="padding-bottom: 3vw;">
+              <div class="textright">
+                <h2><a href="https://eliassimpson.github.io/eliassimpson/CV">Resume</a></h2>
+                <p class="CV-summary">
+                  Professional Experience<br>
+                  Programming Projects<br>
+                  Skills
+                </p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="machine_learning">
+      <h2> Machine Learning </h2>
+      <table>
+        <tr>
+          <td class="skinny">
+            <img src="https://eliassimpson.github.io/eliassimpson/images/board.gif" class="preload">
+          </td>
+          <td class="skinny">
+            <div style="padding-top: 1px;">
+              <img src="https://eliassimpson.github.io/eliassimpson/images/odds.gif" class="preload">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="algorithms">
+      <table>
+        <tr>
+          <td class="wide">
+            <div style="position: relative; bottom: -42px;">
+              <img src="https://eliassimpson.github.io/eliassimpson/images/Dijkstra.png" class="fitWidth"
+                style="border: 8px solid #e8f2ff;">
+            </div>
+          </td>
+          <td class="wide">
+            <h2>Algorithms</h2>
+            <img src="https://eliassimpson.github.io/eliassimpson/images/USmap.png" class="fitWidth">
+          </td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <section id="team-builds">
+    <h2> Team Builds</h2>
+    <img src="images/team-build.png" class="build-image">
+  </section>
+  <div id="color-base">
     <footer>
-      site hosted free on <a target = "blank" href = "https://github.com/">github</a>, view <a target = "blank" href= "https://github.com/eliassimpson/eliassimpson">repository</a>
-      <span style="float:right">connect with me on <a target = "blank" href="https://www.linkedin.com/in/elias-simpson-483a7093/">LinkedIn</a></span>
+      site hosted free on <a target="blank" href="https://github.com/">github</a>, view <a target="blank"
+        href="https://github.com/eliassimpson/eliassimpson">repository</a>
+      <span style="float:right">connect with me on <a target="blank"
+          href="https://www.linkedin.com/in/elias-simpson-483a7093/">LinkedIn</a></span>
     </footer>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
